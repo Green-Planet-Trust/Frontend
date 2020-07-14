@@ -5,6 +5,7 @@
 2. npm install create-react-app
     1. sudo chown -R $USER /usr/local/lib/node_modules/
 3. npm start
+4. npm install react-bootstrap bootstrap
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
