@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Alerts from './../Components/Alerts'
 import Button from 'react-bootstrap/Button'
 import Link from 'react-router-dom/Link'
+import './../inform.css';
 
 class Inform extends Component {
     // Contructor has to take props and pass it to super 
@@ -43,7 +44,7 @@ class Inform extends Component {
     render() {
         return (
         <div className="Inform">
-            <Alerts />
+            
             <Link to="/">
                 <Button variant="primary">Take me Home!</Button>{' '}
             </Link>

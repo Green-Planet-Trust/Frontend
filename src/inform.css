@@ -1,0 +1,19 @@
+.Inform {
+    text-align: center;
+    background-image: url(/bam.png);
+    background-size: cover;
+
+    background-attachment: fixed;
+   
+    
+    min-height: 100vh;
+    
+}
+.Inform h1{
+    color: white;
+    }
+    
+    .Inform h3{
+        color: white;
+        }
+    
