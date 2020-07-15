@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Alerts from './../Components/Alerts'
 
 class Inform extends Component {
     constructor(props) {
@@ -16,6 +16,7 @@ class Inform extends Component {
     render() {
         return (
         <div className="Inform">
+            <Alerts />
             <h1>This is the inform page</h1>
         </div>
         )

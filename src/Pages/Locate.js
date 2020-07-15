@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Alert from 'react-bootstrap/Alert';
 import logo from './../logo.svg';
-
+import Alerts from './../Components/Alerts'
 
 
 
@@ -13,9 +12,7 @@ class Locate extends Component {
     render() {
         return (
         <div className="App">
-            <Alert variant="primary">
-                This is a bootstrap element!
-            </Alert>
+            <Alerts />
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1>Welcome to the Future of IBM Energy Trust</h1>

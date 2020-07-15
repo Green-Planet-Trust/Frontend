@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
 import Link from 'react-router-dom/Link'
+import Alerts from './../Components/Alerts'
 
 class Home extends Component {
     componentDidMount() {
@@ -10,11 +11,12 @@ class Home extends Component {
     render() {
         return (
         <div className="Home">
-            <Link to="Locate">
+            <Alerts />
+            <Link to="/locate">
                 <Button variant="primary">Locate</Button>{' '}
             </Link>
-            <Link to="/Inform">
-                <Button variant='Warning'>Inform</Button>
+            <Link to="/inform">
+                <Button variant="secondary">Inform</Button>
             </Link>
         </div>
         )
