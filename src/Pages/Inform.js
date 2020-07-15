@@ -13,6 +13,28 @@ class Inform extends Component {
 
     componentDidMount() {
         console.log("On Inform Page now")
+
+        let product_id = "0125551234508"
+
+        fetch(`http://127.0.0.1:5000/v1/product?barcode_id=${product_id}`, {
+            mode: 'cors',
+            method: "GET",
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Request-Headers": "*",
+                "Access-Control-Allow-Headers": "*"
+            }
+        }).then(res => res.json())
+        .then(
+            (result) => {
+                console.log("We heard something!!")
+                console.log(result)
+            },
+            (error) => {
+                console.log(error);
+                console.log("ERROR!")
+            }
+        )
     }
 
     render() {
