@@ -8,6 +8,19 @@
 4. npm install react-bootstrap bootstrap
 5. npm install react-router-dom
 
+# Helpful Information
+- A really nice Bootstrap integration with React can be found [here](https://react-bootstrap.github.io/components)
+- React Router DOM is what allows the feeling of pages when really it never contacts the server after the first time
+
+# Members
+- Ariel Uy 
+- Christopher Shortell
+- Daniel Rodriguez 
+- Jacob Engelbrecht 
+
+# Purpose
+This was built as part of the 2021 IBM Intern Hackathon!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
