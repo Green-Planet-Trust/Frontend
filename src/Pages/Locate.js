@@ -9,7 +9,10 @@ import Card from 'react-bootstrap/Card'
 import Link from 'react-router-dom/Link'
 import { Form, CardDeck } from 'react-bootstrap';
 import truck_img from '../truck.jpg';
-
+import './../locate.css';
+import retail_img from '../retail.jpg';
+import prod from '../production.jpg';
+import trans from '../transportation.jpg';
 
 class Locate extends Component {
     componentDidMount() {
@@ -80,7 +83,7 @@ class Locate extends Component {
                     <span>{product[0].category}</span>
                     <CardDeck>
                     <Card style={{ width: '18rem' }} text='dark'>
-                    <Card.Img variant="top" src={truck_img} />
+                    <Card.Img variant="top" src={prod} />
                     <Card.Body>
                         <Card.Title>Production</Card.Title>
                         <Card.Text>
@@ -91,7 +94,7 @@ class Locate extends Component {
                     </Card>
 
                     <Card style={{ width: '18rem' }} text='dark'>
-                    <Card.Img variant="top" src={truck_img} />
+                    <Card.Img variant="top" src={trans} />
                     <Card.Body>
                         <Card.Title>Transportation</Card.Title>
                         <Card.Text>
@@ -102,7 +105,7 @@ class Locate extends Component {
                     </Card>
 
                     <Card style={{ width: '18rem' }} text='dark'>
-                    <Card.Img variant="top" src={truck_img} />
+                    <Card.Img variant="top" src={retail_img} />
                     <Card.Body>
                         <Card.Title>Retail</Card.Title>
                         <Card.Text>

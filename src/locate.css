@@ -1,25 +1,18 @@
-.Home {
+.App {
     text-align: center;
     background-image: url(/bam.png);
     background-size: cover;
 
     background-attachment: fixed;
    
-    color: white;
+    
     min-height: 100vh;
     
 }
-.Home h1{
+.App h1{
 color: white;
 }
 
-.Home h3{
+.App h3{
     color: white;
     }
-
-.carbonCard {
-    width: 18em;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
