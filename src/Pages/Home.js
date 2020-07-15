@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
 import Link from 'react-router-dom/Link'
 import Alerts from './../Components/Alerts'
+import Navbars from './../Components/Navbars'
 import './../home.css';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
@@ -17,7 +18,7 @@ class Home extends Component {
         // Notice that return must take one container (div) but can have lots inside
         return (
         <div className="Home">
-            
+            <Navbars /> 
             <h1>Welcome to the Future of IBM Energy Trust</h1>
             <br></br>
             <h3>
