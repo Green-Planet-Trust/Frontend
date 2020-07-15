@@ -6,6 +6,7 @@
     1. sudo chown -R $USER /usr/local/lib/node_modules/
 3. npm start
 4. npm install react-bootstrap bootstrap
+5. npm install react-router-dom
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
