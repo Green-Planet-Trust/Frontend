@@ -7,10 +7,12 @@ import Link from 'react-router-dom/Link'
 
 class Locate extends Component {
     componentDidMount() {
+        // If you inspect the page and go to console you can see the output
         console.log("On Locate Page now")
     }
 
     render() {
+        // contains the default react project imagery 
         return (
         <div className="App">
             <Alerts />

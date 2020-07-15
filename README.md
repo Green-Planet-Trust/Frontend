@@ -2,15 +2,14 @@
 
 # What I did on my machine
 1. download [node](https://nodejs.org/en/download/)
-2. npm install create-react-app
-    1. sudo chown -R $USER /usr/local/lib/node_modules/
-3. npm start
-4. npm install react-bootstrap bootstrap
-5. npm install react-router-dom
+2. clone this repo
+4. `npm install`
+6. `npm start`
 
 # Helpful Information
 - A really nice Bootstrap integration with React can be found [here](https://react-bootstrap.github.io/components)
 - React Router DOM is what allows the feeling of pages when really it never contacts the server after the first time
+- `npm install create-react-app` was used to create the app
 
 # Members
 - Ariel Uy 
@@ -21,6 +20,8 @@
 # Purpose
 This was built as part of the 2021 IBM Intern Hackathon!
 
+
+# Everything beyond is default generated README
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

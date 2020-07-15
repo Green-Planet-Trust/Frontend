@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Link from 'react-router-dom/Link'
 
 class Inform extends Component {
+    // Contructor has to take props and pass it to super 
     constructor(props) {
         super(props);
         this.state = {
@@ -14,9 +15,11 @@ class Inform extends Component {
     componentDidMount() {
         console.log("On Inform Page now")
 
-        let product_id = "0125551234508"
+        // Barcode ID to look up 
+        let barcode_id = "0125551234508"
 
-        fetch(`http://127.0.0.1:5000/v1/product?barcode_id=${product_id}`, {
+        // Go to this url and get the response 
+        fetch(`http://127.0.0.1:5000/v1/product?barcode_id=${barcode_id}`, {
             mode: 'cors',
             method: "GET",
             headers: {
@@ -24,8 +27,8 @@ class Inform extends Component {
                 "Access-Control-Request-Headers": "*",
                 "Access-Control-Allow-Headers": "*"
             }
-        }).then(res => res.json())
-        .then(
+        }).then(res => res.json()) // then convert to json 
+        .then( // then do somethin with result or the error 
             (result) => {
                 console.log("We heard something!!")
                 console.log(result)
