@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from './../logo.svg';
 import Alerts from './../Components/Alerts'
+import Navbars from './../Components/Navbars'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -59,62 +60,60 @@ class Locate extends Component {
         // contains the default react project imagery 
         return (
         <div className="App">
-            <Link to="/">
-                <Button variant="primary">Take me Home!</Button>
-            </Link>
-                <form onSubmit={e => this.handleSearchSubmit(e)}>
-                    <Row>
-                        <Col xs="auto">
-                            <Form.Group controlId="barcode">
-                                <Form.Control type="input" placeholder="Barcode" />
-                            </Form.Group>
-                        </Col>
-                        <Col xs="auto">
-                            <Button variant="primary" type="submit" block>
-                                Search
-                            </Button>
-                        </Col>
-                    </Row>
-                </form>
-                {product != null && product != undefined ? 
-                    <div className="container">
-                        <span>{product[0].category}</span>
-                        <CardDeck>
-                        <Card style={{ width: '18rem' }} text='dark'>
-                        <Card.Img variant="top" src={truck_img} />
-                        <Card.Body>
-                            <Card.Title>Production</Card.Title>
-                            <Card.Text>
-                            CO2: {product[0].rating_data.CO2}
-                            </Card.Text>
-                            <Button variant="primary">Learn more</Button>
-                        </Card.Body>
-                        </Card>
+            <Navbars />
+            <form onSubmit={e => this.handleSearchSubmit(e)}>
+                <Row>
+                    <Col xs="auto">
+                        <Form.Group controlId="barcode">
+                            <Form.Control type="input" placeholder="Barcode" />
+                        </Form.Group>
+                    </Col>
+                    <Col xs="auto">
+                        <Button variant="primary" type="submit" block>
+                            Search
+                        </Button>
+                    </Col>
+                </Row>
+            </form>
+            {product != null && product != undefined ? 
+                <div className="container">
+                    <span>{product[0].category}</span>
+                    <CardDeck>
+                    <Card style={{ width: '18rem' }} text='dark'>
+                    <Card.Img variant="top" src={truck_img} />
+                    <Card.Body>
+                        <Card.Title>Production</Card.Title>
+                        <Card.Text>
+                        CO2: {product[0].rating_data.CO2}
+                        </Card.Text>
+                        <Button variant="primary">Learn more</Button>
+                    </Card.Body>
+                    </Card>
 
-                        <Card style={{ width: '18rem' }} text='dark'>
-                        <Card.Img variant="top" src={truck_img} />
-                        <Card.Body>
-                            <Card.Title>Transportation</Card.Title>
-                            <Card.Text>
-                            CO2: {product[0].rating_data.CO2}
-                            </Card.Text>
-                            <Button variant="primary">Learn more</Button>
-                        </Card.Body>
-                        </Card>
+                    <Card style={{ width: '18rem' }} text='dark'>
+                    <Card.Img variant="top" src={truck_img} />
+                    <Card.Body>
+                        <Card.Title>Transportation</Card.Title>
+                        <Card.Text>
+                        CO2: {product[0].rating_data.CO2}
+                        </Card.Text>
+                        <Button variant="primary">Learn more</Button>
+                    </Card.Body>
+                    </Card>
 
-                        <Card style={{ width: '18rem' }} text='dark'>
-                        <Card.Img variant="top" src={truck_img} />
-                        <Card.Body>
-                            <Card.Title>Retail</Card.Title>
-                            <Card.Text>
-                            CO2: {product[0].rating_data.CO2}
-                            </Card.Text>
-                            <Button variant="primary">Learn more</Button>
-                        </Card.Body>
-                        </Card>
-                        </CardDeck>
-                    </div>
-                 : null}
+                    <Card style={{ width: '18rem' }} text='dark'>
+                    <Card.Img variant="top" src={truck_img} />
+                    <Card.Body>
+                        <Card.Title>Retail</Card.Title>
+                        <Card.Text>
+                        CO2: {product[0].rating_data.CO2}
+                        </Card.Text>
+                        <Button variant="primary">Learn more</Button>
+                    </Card.Body>
+                    </Card>
+                    </CardDeck>
+                </div>
+                : null}
         </div>
         )
     }
