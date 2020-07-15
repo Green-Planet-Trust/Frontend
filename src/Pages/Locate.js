@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import logo from './../logo.svg';
 import Alerts from './../Components/Alerts'
-
+import Button from 'react-bootstrap/Button'
+import Link from 'react-router-dom/Link'
 
 
 class Locate extends Component {
@@ -13,6 +14,9 @@ class Locate extends Component {
         return (
         <div className="App">
             <Alerts />
+            <Link to="/">
+                <Button variant="primary">Take me Home!</Button>
+            </Link>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1>Welcome to the Future of IBM Energy Trust</h1>
