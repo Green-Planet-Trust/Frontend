@@ -1,4 +1,5 @@
 # Welcome to the Green Planet Trust Frountend!
+![alt text](https://github.com/Green-Planet-Trust/Frontend/blob/JacobWorking/splash.png?raw=true)
 
 # What I did on my machine
 1. download [node](https://nodejs.org/en/download/)
