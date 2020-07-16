@@ -20,7 +20,7 @@ class About extends Component {
             <br></br>
             <div className="body">
                 <p>
-                    <h2>Why do we need the Energy Trust?</h2>
+                    <h2>Why do we need the IBM Energy Trust?</h2>
                     <br></br><br></br>
                     Pollution is a modern problem that requires a modern solution. With billions of tons of CO2 emitted every year, 
                     at a continually growing rate, we will need to address these problems now. Currently the largest oil and gas 
