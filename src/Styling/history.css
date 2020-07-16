@@ -1,0 +1,10 @@
+.History {
+    text-align: center;
+    background-image: url(/bam.png);
+    background-size: cover;
+
+    background-attachment: fixed;
+   
+    color: white;
+    min-height: 100vh;
+}
