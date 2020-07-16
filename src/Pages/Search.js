@@ -11,15 +11,15 @@ import Popover from 'react-bootstrap/Popover'
 import Link from 'react-router-dom/Link'
 import { Form, CardDeck } from 'react-bootstrap';
 import truck_img from '../truck.jpg';
-import './../locate.css';
+import './../search.css';
 import retail_img from '../retail.jpg';
 import prod from '../production.jpg';
 import trans from '../transportation.jpg';
 
-class Locate extends Component {
+class Search extends Component {
     componentDidMount() {
         // If you inspect the page and go to console you can see the output
-        console.log("On Locate Page now")
+        console.log("On Search Page now")
     }
 
     state = {
@@ -179,4 +179,4 @@ class Locate extends Component {
     }
 }
 
-export default Locate;
+export default Search;

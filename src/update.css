@@ -1,4 +1,4 @@
-.Inform {
+.Update {
     text-align: center;
     background-image: url(/bam.png);
     background-size: cover;
@@ -9,11 +9,11 @@
     min-height: 100vh;
     
 }
-.Inform h1{
+.Update h1{
     color: white;
     }
     
-    .Inform h3{
+    .Update h3{
         color: white;
         }
     

@@ -28,35 +28,33 @@ class Home extends Component {
             <br></br>
          
             <CardDeck> 
-            <Card className='carbonCard'>
+            <Card className='carbonCard' text='dark'>
             <Card.Img variant="top" src="carbon.jpg" />
             <Card.Body>
-                <Card.Title>Locate</Card.Title>
+                <Card.Title>For Consumers</Card.Title>
                 <Card.Text>
-                 Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                Search for an item by barcode to view its carbon footprint.
                 </Card.Text>
-                <Link to="/locate">
+                <Link to="/search">
 
                 
-                 <Button variant="primary">Locate</Button>
+                 <Button variant="success">Search</Button>
                  </Link>
              </Card.Body>
             </Card>{' '}   
             
 
-            <Card className='carbonCard'>
+            <Card className='carbonCard' text='dark'>
             <Card.Img variant="top" src="charts.jpeg" />
             <Card.Body>
-                <Card.Title>Inform</Card.Title>
+                <Card.Title>For Producers</Card.Title>
                 <Card.Text>
-                 Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                Enter and update your company's products and carbon emissions.
                 </Card.Text>
-                <Link to="/inform">
+                <Link to="/update">
 
                 
-                 <Button variant="success">Inform</Button>
+                 <Button variant="success">Update</Button>
                  </Link>
              </Card.Body>
             </Card>   

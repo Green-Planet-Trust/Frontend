@@ -7,9 +7,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
-import './../inform.css';
+import './../update.css';
 
-class Inform extends Component {
+class Update extends Component {
     // Contructor has to take props and pass it to super 
     constructor(props) {
         super(props);
@@ -28,7 +28,7 @@ class Inform extends Component {
     }
 
     componentDidMount() {
-        console.log("On Inform Page now")
+        console.log("On Update Page now")
     }
 
     postUpdate(method, json_string) {
@@ -93,10 +93,10 @@ class Inform extends Component {
 
     render() {
         return (
-        <div className="Inform">
+        <div className="Update">
             <Navbars />
             <br></br>
-            <h1>This is the inform page</h1>
+            <h1>This is the update page</h1>
             <br></br>
             <h3>This is where a supplier could update carbon emmissions</h3>
             <Card className="supplier_update">
@@ -146,4 +146,4 @@ class Inform extends Component {
     }
 }
 
-export default Inform;
+export default Update;
