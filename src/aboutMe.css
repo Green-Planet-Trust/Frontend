@@ -14,5 +14,18 @@ color: white;
 }
 
 .About br{
-    color: white;
-    }
+  color: white;
+}
+
+.About .body{
+    background-color: white;
+    opacity: 80%;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    margin: 5%;
+    padding: 5%;
+    text-align: left;
+}
+.About .body h2{
+    text-align: center;
+}
