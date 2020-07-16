@@ -13,6 +13,7 @@ function Navbars(props) {
                 <Nav className="mr-auto">
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>
+                <Nav.Link as={Link} to="/impact">Impact</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

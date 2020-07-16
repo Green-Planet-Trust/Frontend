@@ -1,4 +1,4 @@
-.About {
+.Impact {
     text-align: center;
     background-image: url(/bam.png);
     background-size: cover;
@@ -9,10 +9,10 @@
     min-height: 100vh;
     
 }
-.About h1{
+.Impact h1{
 color: white;
 }
 
-.About br{
+.Impact h3{
     color: white;
     }
