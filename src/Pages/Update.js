@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
 import './../update.css';
+import { render } from '@testing-library/react'
 
 class Update extends Component {
     // Contructor has to take props and pass it to super 
@@ -43,6 +44,7 @@ class Update extends Component {
             }
         }).then(function(res) {
             console.log(res);
+            render();
             return res.json();
         });
     }
@@ -97,8 +99,17 @@ class Update extends Component {
             <Navbars />
             <br></br>
             <h1>Update</h1>
-            <h3>Enter a new product or update the carbon emissions of an existing product.</h3>
-            <Card className="supplier_update">
+            
+            {this.state.UID > 0 ?
+            <div>
+                <h3>Submitted!</h3>
+                <Button variant="secondary" href="/update" type="submit">
+                    Submit Another
+                </Button>
+            </div>
+            : <div>
+                <h3>Enter a new product or update the carbon emissions of an existing product.</h3>
+                <Card className="supplier_update">
                 <form onSubmit={e => this.handleSupplierUpdateSubmit(e)}>
                     <Form.Group controlId="company_name">
                         <Form.Control type="input" placeholder="Company Name" />
@@ -139,6 +150,8 @@ class Update extends Component {
                     </Button>
                 </form>
             </Card>
+            </div>
+        }
 
         </div>
         )
