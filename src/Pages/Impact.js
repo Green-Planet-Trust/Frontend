@@ -19,7 +19,7 @@ class Impact extends Component {
         <div className="Impact">
            
             <Navbars /> 
-            <h1>Impact</h1>
+            <h1><b>Impact</b></h1>
             
             <br></br>
             <div className="text">
