@@ -64,31 +64,31 @@ class Locate extends Component {
         const product = this.state.product;
         const popover_prod = (
         <Popover id="popover-basic">
-            <Popover.Title as="h3">Popover right</Popover.Title>
+            <Popover.Title as="h3">Where does CO2 come from in production of goods?</Popover.Title>
             <Popover.Content>
-            And here's some <strong>amazing</strong> content. It's very engaging.
-            right?
+            In manufacturing, there are 3 main ways energy is used: fuel, electricity, and steam. This energy is needed for heating, cooling, machinery, chemical reactions, HVAC, and other processses. CO2 and other greenhouse gases are released in combustion of natural gas, coal, and other energy sources.
             </Popover.Content>
         </Popover>
         );
+        // https://www.energy.gov/sites/prod/files/2013/11/f4/energy_use_and_loss_and_emissions.pdf
         const popover_transp = (
         <Popover id="popover-basic">
-            <Popover.Title as="h3">Popover right</Popover.Title>
+            <Popover.Title as="h3">Where does CO2 come from in transportation of goods?</Popover.Title>
             <Popover.Content>
-            And here's some <strong>amazing</strong> content. It's very engaging.
-            right?
+            Imports and exports of goods and their supply chains are a large source of carbon emissions. Road transportation accounts for more than half of the transportation emmissions. Air transportation is the least efficient, while maritime shipping is the most efficient. Burning gasoline and diesel for these modes of transportation releases CO2.
             </Popover.Content>
         </Popover>
         );
+        // https://www.itf-oecd.org/sites/default/files/docs/cop-pdf-06.pdf
         const popover_retail = (
         <Popover id="popover-basic">
-            <Popover.Title as="h3">Popover right</Popover.Title>
+            <Popover.Title as="h3">Where does CO2 come from in retail of goods?</Popover.Title>
             <Popover.Content>
-            And here's some <strong>amazing</strong> content. It's very engaging.
-            right?
+            The impact of retail is often not as significant as production and transportation, but it is still important to consider. Heating, A/C, lighting, cooking, refrigeration, and ventilation are the main uses of energy in stores. Oil, gas, and refrigerants produce carbon emissions. 
             </Popover.Content>
         </Popover>
         );
+        // https://ec.europa.eu/environment/industry/retail/pdf/Issue%20Paper%206.pdf
         // contains the default react project imagery 
         return (
         <div className="App">
@@ -155,6 +155,23 @@ class Locate extends Component {
                     </Card.Body>
                     </Card>
                     </CardDeck>
+
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 </div>
                 : null}
         </div>
