@@ -24,7 +24,8 @@ class Update extends Component {
                 Transportation: -1,
                 Retail: -1
             },
-            Date: ""
+            Date: "",
+            description: ""
         };
     }
 
@@ -77,7 +78,7 @@ class Update extends Component {
         const company_name = form.elements[0].value;
         const sector = form.elements[1].value;
         const product = form.elements[2].value;
-        const barcode_id = Number(form.elements[3].value);
+        const barcode_id = form.elements[3].value;
         const carbon_footprint = Number(form.elements[4].value);
         const production = Number(form.elements[5].value);
         const transportation = Number(form.elements[6].value);
@@ -100,7 +101,7 @@ class Update extends Component {
             <br></br>
             <h1>Update</h1>
             
-            {this.state.UID > 0 ?
+            {this.state.UID !== -1 ?
             <div>
                 <h3>Submitted!</h3>
                 <Button variant="secondary" href="/update" type="submit">
