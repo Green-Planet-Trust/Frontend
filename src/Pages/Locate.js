@@ -64,6 +64,8 @@ class Locate extends Component {
         return (
         <div className="App">
             <Navbars />
+            <br></br>
+            <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
             <form onSubmit={e => this.handleSearchSubmit(e)}>
                 <Row>
                     <Col xs="auto">
@@ -78,16 +80,19 @@ class Locate extends Component {
                     </Col>
                 </Row>
             </form>
+            </div>
             {product != null && product != undefined ? 
                 <div className="container">
-                    <span>{product[0].category}</span>
+                    <h1>{product[0].CurrentCompany}</h1>
+                    <h2>{product[0].description}</h2>
+                    <h3>Total carbon footprint: {product[0].CarbonFootprint}</h3>
                     <CardDeck>
                     <Card style={{ width: '18rem' }} text='dark'>
                     <Card.Img variant="top" src={prod} />
                     <Card.Body>
                         <Card.Title>Production</Card.Title>
                         <Card.Text>
-                        CO2: {product[0].rating_data.CO2}
+                        CO2: {product[0].Stages.Production}
                         </Card.Text>
                         <Button variant="primary">Learn more</Button>
                     </Card.Body>
@@ -98,7 +103,7 @@ class Locate extends Component {
                     <Card.Body>
                         <Card.Title>Transportation</Card.Title>
                         <Card.Text>
-                        CO2: {product[0].rating_data.CO2}
+                        CO2: {product[0].Stages.Transportation}
                         </Card.Text>
                         <Button variant="primary">Learn more</Button>
                     </Card.Body>
@@ -109,7 +114,7 @@ class Locate extends Component {
                     <Card.Body>
                         <Card.Title>Retail</Card.Title>
                         <Card.Text>
-                        CO2: {product[0].rating_data.CO2}
+                        CO2: {product[0].Stages.Retail}
                         </Card.Text>
                         <Button variant="primary">Learn more</Button>
                     </Card.Body>

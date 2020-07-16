@@ -15,7 +15,15 @@ class Inform extends Component {
         super(props);
         this.state = {
             UID: -1,
-            carbon_footprint: -1
+            CarbonFootprint: -1,
+            CurrentCompany: "",
+            isRecycleable: false,
+            Stages: {
+                Production: -1,
+                Transportation: -1,
+                Retail: -1
+            },
+            Date: ""
         };
     }
 
@@ -23,10 +31,10 @@ class Inform extends Component {
         console.log("On Inform Page now")
     }
 
-    postUpdate(json_string) {
-        fetch(`http://127.0.0.1:5000/v1/product?barcode_id=${this.state.UID}`, {
+    postUpdate(method, json_string) {
+        fetch(`http://127.0.0.1:5000/v1/product/${this.state.UID}`, {
             mode: 'cors',
-            method: "POST",
+            method: method,
             body: json_string,
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -37,6 +45,28 @@ class Inform extends Component {
             console.log(res);
             return res.json();
         });
+    }
+
+    tryGet(barcode_id, json_string) {
+        // Go to this url and get the response 
+        fetch(`http://127.0.0.1:5000/v1/product?barcode_id=${barcode_id}`, {
+            mode: 'cors',
+            method: "GET",
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Request-Headers": "*",
+                "Access-Control-Allow-Headers": "*"
+            }
+        }).then(res => res.json()) // then convert to json 
+        .then( // then do somethin with result or the error 
+            (result) => {
+                console.log(result);
+                this.postUpdate("PUT", json_string);
+            },
+            (error) => {
+                this.postUpdate("POST", json_string);
+            }
+        )
     }
 
     handleSupplierUpdateSubmit(event) {
@@ -51,8 +81,14 @@ class Inform extends Component {
         const transportation = Number(form.elements[6].value);
         const retail = Number(form.elements[7].value);
         const is_recyclable = form.elements[8].value;
-        this.setState({UID: barcode_id, carbon_footprint: carbon_footprint}, function() {
-        this.postUpdate(JSON.stringify(this.state)); });
+        this.setState({UID: barcode_id, CarbonFootprint: carbon_footprint, 
+            CurrentCompany: company_name, isRecycleable: is_recyclable, 
+            Stages: {Production: production, Transportation: transportation, Retail: retail}, 
+            Date: "", description: product}, function() {
+            const json_string = JSON.stringify(this.state);
+            console.log(json_string);
+            this.tryGet(barcode_id, json_string); 
+        });
     }
 
     render() {
