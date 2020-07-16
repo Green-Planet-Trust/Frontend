@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Popover from 'react-bootstrap/Popover'
 import Link from 'react-router-dom/Link'
 import { Form, CardDeck } from 'react-bootstrap';
 import truck_img from '../truck.jpg';
@@ -60,6 +62,33 @@ class Locate extends Component {
 
     render() {
         const product = this.state.product;
+        const popover_prod = (
+        <Popover id="popover-basic">
+            <Popover.Title as="h3">Popover right</Popover.Title>
+            <Popover.Content>
+            And here's some <strong>amazing</strong> content. It's very engaging.
+            right?
+            </Popover.Content>
+        </Popover>
+        );
+        const popover_transp = (
+        <Popover id="popover-basic">
+            <Popover.Title as="h3">Popover right</Popover.Title>
+            <Popover.Content>
+            And here's some <strong>amazing</strong> content. It's very engaging.
+            right?
+            </Popover.Content>
+        </Popover>
+        );
+        const popover_retail = (
+        <Popover id="popover-basic">
+            <Popover.Title as="h3">Popover right</Popover.Title>
+            <Popover.Content>
+            And here's some <strong>amazing</strong> content. It's very engaging.
+            right?
+            </Popover.Content>
+        </Popover>
+        );
         // contains the default react project imagery 
         return (
         <div className="App">
@@ -81,10 +110,10 @@ class Locate extends Component {
                 </Row>
             </form>
             </div>
-            {product != null && product != undefined ? 
+            {product !== null && product !== undefined ? 
                 <div className="container">
                     <h1>{product[0].CurrentCompany}</h1>
-                    <h2>{product[0].description}</h2>
+                    <h3>{product[0].description}</h3>
                     <h3>Total carbon footprint: {product[0].CarbonFootprint}</h3>
                     <CardDeck>
                     <Card style={{ width: '18rem' }} text='dark'>
@@ -94,7 +123,9 @@ class Locate extends Component {
                         <Card.Text>
                         CO2: {product[0].Stages.Production}
                         </Card.Text>
-                        <Button variant="primary">Learn more</Button>
+                        <OverlayTrigger trigger="click" placement="bottom" overlay={popover_prod}>
+                            <Button variant="primary">Learn more</Button>
+                        </OverlayTrigger>
                     </Card.Body>
                     </Card>
 
@@ -105,7 +136,9 @@ class Locate extends Component {
                         <Card.Text>
                         CO2: {product[0].Stages.Transportation}
                         </Card.Text>
-                        <Button variant="primary">Learn more</Button>
+                        <OverlayTrigger trigger="click" placement="bottom" overlay={popover_transp}>
+                            <Button variant="primary">Learn more</Button>
+                        </OverlayTrigger>
                     </Card.Body>
                     </Card>
 
@@ -116,7 +149,9 @@ class Locate extends Component {
                         <Card.Text>
                         CO2: {product[0].Stages.Retail}
                         </Card.Text>
-                        <Button variant="primary">Learn more</Button>
+                        <OverlayTrigger trigger="click" placement="bottom" overlay={popover_retail}>
+                            <Button variant="primary">Learn more</Button>
+                        </OverlayTrigger>
                     </Card.Body>
                     </Card>
                     </CardDeck>
