@@ -16,3 +16,12 @@ color: white;
 .Impact h3{
     color: white;
     }
+
+    .text {
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-bottom: 40%;
+        opacity: 80%;
+        background-color: white;
+        color: black;
+    }
