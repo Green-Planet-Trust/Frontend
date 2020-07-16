@@ -7,7 +7,7 @@ import Link from 'react-router-dom/Link'
 function Navbars(props) {
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand>Green Planet Trust</Navbar.Brand>
+            <Navbar.Brand>IBM Energy Trust</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
