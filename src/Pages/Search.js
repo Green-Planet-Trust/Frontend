@@ -94,6 +94,8 @@ class Search extends Component {
         <div className="App">
             <Navbars />
             <br></br>
+            <h1>Search</h1>
+            <h3>Enter or scan a barcode to learn about a product's carbon emmisions.</h3>
             <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
             <form onSubmit={e => this.handleSearchSubmit(e)}>
                 <Row>
@@ -121,7 +123,7 @@ class Search extends Component {
                     <Card.Body>
                         <Card.Title>Production</Card.Title>
                         <Card.Text>
-                        CO2: {product[0].Stages.Production}
+                        CO2: {product[0].Stages.Production} MJ
                         </Card.Text>
                         <OverlayTrigger trigger="click" placement="bottom" overlay={popover_prod}>
                             <Button variant="primary">Learn more</Button>
@@ -134,7 +136,7 @@ class Search extends Component {
                     <Card.Body>
                         <Card.Title>Transportation</Card.Title>
                         <Card.Text>
-                        CO2: {product[0].Stages.Transportation}
+                        CO2: {product[0].Stages.Transportation} MJ
                         </Card.Text>
                         <OverlayTrigger trigger="click" placement="bottom" overlay={popover_transp}>
                             <Button variant="primary">Learn more</Button>
@@ -147,7 +149,7 @@ class Search extends Component {
                     <Card.Body>
                         <Card.Title>Retail</Card.Title>
                         <Card.Text>
-                        CO2: {product[0].Stages.Retail}
+                        CO2: {product[0].Stages.Retail} MJ
                         </Card.Text>
                         <OverlayTrigger trigger="click" placement="bottom" overlay={popover_retail}>
                             <Button variant="primary">Learn more</Button>

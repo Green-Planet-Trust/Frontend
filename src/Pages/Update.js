@@ -96,9 +96,8 @@ class Update extends Component {
         <div className="Update">
             <Navbars />
             <br></br>
-            <h1>This is the update page</h1>
-            <br></br>
-            <h3>This is where a supplier could update carbon emmissions</h3>
+            <h1>Update</h1>
+            <h3>Enter a new product or update the carbon emissions of an existing product.</h3>
             <Card className="supplier_update">
                 <form onSubmit={e => this.handleSupplierUpdateSubmit(e)}>
                     <Form.Group controlId="company_name">
